@@ -2,37 +2,41 @@
 # A single node of a singly linked list
 class Node:
   # constructor
+  # variable table
   def __init__(self, data = None, next=None): 
-    self.data = data
-    self.next = next
+    self.data = data               # data = 5
+    self.next = next               # next = None
 
 class Node:  
   
     # Function to initialise the node object  
+    # variable table
+   
     def __init__(self, data):  
-        self.data = data  
-        self.next = None 
+        self.data = data            # data = 5                           
+        self.next = None            # next = None
   
 class LinkedList: 
-  
+    # variable table
+                         
     def __init__(self): 
-        self.head = None
-  
-    def push(self, new_data): 
-        new_node = Node(new_data) 
-        new_node.next = self.head 
-        self.head = new_node 
+        self.head = None            # head=None
+    
+    def push(self, new_data):       # new_data=5
+        new_node = Node(new_data)   # new_node=Node(5)
+        new_node.next = self.head   #new_node = None
+        self.head = new_node        #self.head= Node(5)
   
     # Function to get the middle of  
     # the linked list 
     def printMiddle(self): 
-        slow_ptr = self.head 
-        fast_ptr = self.head 
+        slow_ptr = self.head        # slow_ptr = Node(5)
+        fast_ptr = self.head        # fast_ptr = Node(5)
   
         if self.head is not None: 
-            while (fast_ptr is not None and fast_ptr.next is not None): 
-                fast_ptr = fast_ptr.next.next
-                slow_ptr = slow_ptr.next
+            while (fast_ptr is not None and fast_ptr.next is not None): # fast_ptr != None 
+                fast_ptr = fast_ptr.next.next   # fast_ptr = None
+                slow_ptr = slow_ptr.next        # slow_ptr = None
             print("The middle element is: ", slow_ptr.data) 
   
 # Driver code 
